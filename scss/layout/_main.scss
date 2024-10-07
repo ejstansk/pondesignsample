@@ -1,0 +1,8 @@
+@use "../global" as g;
+
+.l-contents {
+  &--page-recruit {
+    background-image: url(img/bg-geometry.png);
+    background-repeat: repeat;
+  }
+}

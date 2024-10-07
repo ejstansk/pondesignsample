@@ -1,0 +1,47 @@
+@use "../../global" as g;
+
+.p-company{
+
+        background-image: url(img/bg-circle.png);
+        background-repeat: repeat;
+
+    &__wrapper{
+        background-image: url(img/bg-face.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        height:416px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        @include g.mq(md) {
+            padding: 60px 0;
+            background-image: url(img/sp_bg-circle.png);
+            background-position: center center;
+            background-size: 375px;
+          }
+    }
+
+
+    &__heading{
+        margin: 20px;
+        @include g.font-size(40);
+        font-weight: bold;
+        text-decoration: underline 10px solid #F5F534;
+        text-underline-offset: -2px;
+        @include g.mq(md) {
+            @include g.font-size(32);
+        }
+    }
+
+    &__text{
+        margin-bottom: 20px;
+    }
+
+    &__desc{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

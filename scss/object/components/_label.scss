@@ -1,0 +1,15 @@
+@use "../../global" as g;
+
+.c-label{
+
+    &__category{
+        display: block;
+        text-align: center;
+        width: 80px;
+        padding: 3px 0;
+        border-radius: 20px;
+        @include g.font-size(12);
+        font-weight: bold;
+        background-color: g.$color-gray;
+    }
+}

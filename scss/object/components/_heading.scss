@@ -1,0 +1,32 @@
+@use "../../global" as g;
+
+.c-heading-primary{
+    color: g.$color-primary;
+    line-height: 1;
+    @include g.font-size(36);
+
+    &--white {
+        color: g.$color-white;
+      }
+}
+
+.c-heading-primary__sub {
+    color: g.$color-primary;
+    @include g.font-size(13);
+    line-height: 1;
+    font-weight: bold;
+    margin-top: 5px;
+
+    &--white {
+        color: g.$color-white;
+      }
+}
+
+.c-heading-section{
+  color: g.$color-primary;
+  line-height: 1;
+  @include g.font-size(32);
+  @include g.mq(md) {
+    @include g.font-size(24);
+ }
+}

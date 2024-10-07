@@ -1,0 +1,14 @@
+@use "../../global" as g;
+
+.p-access{
+
+    &__map{
+        height: 450px;
+        vertical-align: bottom;
+    }
+
+    &__link{
+        margin-top: 0px;
+        text-align: left;
+    }
+}

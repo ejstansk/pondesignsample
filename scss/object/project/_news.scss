@@ -1,0 +1,22 @@
+@use "../../global" as g;
+
+.p-news{
+
+    &__inner{
+        max-width: 950px;
+        display: flex;
+        gap: 50px;
+        padding-top: 70px;
+        @include g.mq(md) {
+         flex-direction: column;  
+         gap: 0px;
+        }
+    }
+
+    &__title{
+        @include g.mq(md) {
+         text-align: center;  
+        }
+    }
+
+}

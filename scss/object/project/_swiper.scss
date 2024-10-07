@@ -1,0 +1,39 @@
+@use "../../global" as g;
+
+
+
+.swiper-container {
+  padding-bottom: 30px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  position: absolute;
+  top: 50%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: block;
+  transform: translateY(-50%);
+  color: #391e88;
+
+  @include g.font-size(32);
+}
+
+.swiper-button-next::after {
+  content: "\f105";
+}
+
+.swiper-button-prev::after {
+  content: "\f104";
+}
+
+.swiper-pagination{
+  position: absolute;
+  left: 60%;
+  bottom: -30px !important;
+  text-align: right;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: g.$color-primary;
+}

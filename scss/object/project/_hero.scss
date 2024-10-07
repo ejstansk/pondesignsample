@@ -1,0 +1,96 @@
+@use "../../global" as g;
+
+.p-hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: g.$color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    &__inner{
+        padding: 0 30px;
+        text-align: center;
+        
+        @include g.mq(md) {
+        text-align: left;
+      }
+    }
+
+    &__title{
+        @include g.font-size(72);
+        line-height: 1;
+        margin-bottom: 15px;
+        @include g.mq(md) {
+            @include g.font-size(40);
+          }
+    }
+
+    &__subtitle{
+        @include g.font-size(24);
+        font-weight: normal;
+        margin-bottom: 50px;
+        letter-spacing: 0.1em;
+        @include g.mq(md) {
+            @include g.font-size(16);
+            margin-bottom: 30px;
+          }
+    }
+
+    &__scroll{
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+      bottom: 0;
+      padding: 10px 10px 90px;
+      color: g.$color-white;
+      letter-spacing: 0.2em;
+      line-height: 1;
+      overflow: hidden;
+      writing-mode: vertical-lr;
+      @include g.font-size(12);
+      font-size: 0.75rem;
+      @include g.mq(md) {
+        right: 5px;
+        padding: 10px 10px 60px;
+      }
+      
+      &::after{
+        position: absolute;
+        content: "";
+        display: block;
+        width: 1px;
+        height: 80px;
+        bottom: 0px;
+        left: 50%;
+        background-color: g.$color-white;
+        animation: scrollDownLine 1.5s infinite;
+        @include g.mq(md) {
+          height: 50px;
+        }
+      }
+
+    }
+}
+
+.p-sub-hero {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+    background-image: url(img/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &__inner {
+      padding: 50px 40px 10px 40px;
+      text-align: center;
+    }
+  }

@@ -1,0 +1,33 @@
+@use "../../global" as g;
+
+.c-pagenation{
+
+    &__wrapper{
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    
+    &__page{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        @include g.font-size(20);
+        font-weight: bold;
+    }
+}
+
+.pagenation__current{
+    background-color: #F1EBF8;
+}
+
+.pagenation__next{
+    background: g.$color-btn;
+    color: g.$color-white;
+}

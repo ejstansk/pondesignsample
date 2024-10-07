@@ -1,0 +1,31 @@
+@use "../global" as g;
+
+html{
+    font-size: 100%;
+}
+
+body{
+    font-family: "Montserrat", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    Meiryo, sans-serif;
+    line-height: 1.8;
+    color: g.$color-text;
+    letter-spacing: 0.05em;
+    @include g.font-size(15);
+    @include g.mq(md) {
+        @include g.font-size(14);
+      }
+}
+
+a{
+    transition: 0.3s;
+    color: g.$color-primary;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+img{
+    max-width: 100%;
+    vertical-align: bottom;
+}

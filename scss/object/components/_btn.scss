@@ -1,0 +1,44 @@
+@use "../../global" as g;
+
+.c-btn{
+    display: inline-block;
+    position: relative;
+    width: 220px;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 50px;
+    @include g.font-size(14);
+    font-weight: bold;
+    color: g.$color-white;
+    background: g.$color-btn;
+    background-size: 200%;
+
+    &--transparent {
+        border: 1px solid #fff;
+        background: none;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+    &::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 1.5em;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f0da";
+        transition: 0.3s;
+        transform: translateY(-50%);
+    }
+
+    &:hover{
+        text-decoration: none;
+        background-position: right center;
+        &::after {
+          right: 1.2em;
+        }
+    }
+
+}

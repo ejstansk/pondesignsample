@@ -1,0 +1,37 @@
+@use "../global" as g;
+
+.l-footer {
+  padding: 60px 30px;
+  color: g.$color-white;
+  background-color: #120e19;
+  text-align: center;
+  
+
+  &-nav__list{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &-nav__item{
+    list-style: none;
+    @include g.font-size(12);
+    margin-bottom: 20px;
+  }
+
+  &-nav__link{
+    color: g.$color-white;
+    transition: 0.3s;
+
+    &:hover{
+      opacity: 0.7;
+      text-decoration: none
+    }
+  }
+
+  &__copyright{
+    @include g.font-size(10);
+    color:#A798B7;
+  }
+}
+

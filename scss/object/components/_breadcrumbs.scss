@@ -1,0 +1,40 @@
+@use "../../global" as g;
+
+.c-breadcrumb {
+  position: sticky;
+  top: 64px;
+  z-index: 1;
+  padding: 10px;
+  list-style: none;
+  background-color: g.$color-gray;
+
+
+  &__list {
+    flex-direction: row;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__item {
+    display: inline;
+    list-style: none;
+
+    @include g.font-size(12);
+
+    &::after {
+      padding: 0 0.5rem;
+      content: ">";
+      color: #555;
+    }
+    &:last-child:after {
+      content: "";
+    }
+  }
+}
+
+.c-breadcrumb:before,
+.c-breadcrumb:after {
+  content: "";
+  display: table;
+}
